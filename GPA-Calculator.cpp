@@ -87,12 +87,13 @@ void gpa::evaluate()
 }
 float gpa::TotalGpa()
 {
-	return (float)sum / credit;
+	float total=(float)sum / credit;
+	return total;
 }
 int main()
 {
-	gpa g;
-	cout << "Please enter the number of subjects: ";
+       gpa cg
+	cout << "Please enter the number of subjects of the current semester in which you are studying: ";
 	cin >> g.number_of_subjects;
 	g.enterGrade();
 	g.evaluate();
