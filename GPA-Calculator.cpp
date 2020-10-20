@@ -98,6 +98,6 @@ int main()
 	g.enterGrade();
 	g.evaluate();
 	double totalGpa = g.TotalGpa();
-	cout << "Your total gpa is " << totalGpa;
+	cout << "Your total gpa is: " << totalGpa;
 	return 0;
 }
