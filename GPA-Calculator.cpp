@@ -93,7 +93,7 @@ float gpa::TotalGpa()
 int main()
 {
        gpa g;
-	cout << "Please enter the number of subjects of the current semester in which you are studying: ";
+	cout << "Please enter the number of subjects including labs: ";
 	cin >> g.number_of_subjects;
 	g.enterGrade();
 	g.evaluate();
