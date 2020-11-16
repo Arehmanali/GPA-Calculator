@@ -5,7 +5,7 @@ using namespace std;
 class gpa {						// Class for calculating gpa 
 private:
 	double creditH[25];				// Store the credit hours of student	
-	string grade;					
+	string grade;					// variable for storing the grade of student in string variable	
 	string gradeList[20];				// To get the list of grades
 	double gpa;
 	double credit = 0;
