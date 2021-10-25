@@ -99,6 +99,18 @@ int main()
 	cout<<"***********************************************************************************************************"<<endl;
 	cout << "Please enter the number of subjects including labs: ";
 	cin >> g.number_of_subjects;
+	
+	// input error handled starts
+	if (cin.fail())
+	{
+		cout("ERROR\n");
+		cin.clear();
+		cin.ignore(256,'\n');
+		cout << "\nPlease enter the number of subjects including labs: ";
+		cin >>g.number_of_subjects;
+	}
+	// input erroer handled closes
+	
 	g.enterGrade();
 	g.evaluate();
 	double totalGpa = g.TotalGpa();
