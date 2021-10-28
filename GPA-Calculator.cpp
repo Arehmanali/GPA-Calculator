@@ -22,8 +22,24 @@ void gpa::enterGrade()
 	{
 		cout << "Please enter the grade of " << i + 1 << " subject:";
 		cin >> gradeList[i];								// input the enter grade in gradeList
+		if (cin.fail())
+		{
+			cout("ERROR\n");
+			cin.clear();
+			cin.ignore(256,'\n');
+			cout << "Please enter the grade of " << i + 1 << " subject:";
+			cin >> gradeList[i];
+		}
 		cout << "Please enter the credit hour of " << i + 1 << " subject:";
 		cin >> creditH[i];								// input the entered credit hours in creditH
+		if (cin.fail())
+		{
+			cout("ERROR\n");
+			cin.clear();
+			cin.ignore(256,'\n');
+			cout << "Please enter the credit hour of " << i + 1 << " subject:";
+			cin >> creditH[i];
+		}
 		credit = credit + creditH[i];							// add the creditH in credit
 	}
 	
