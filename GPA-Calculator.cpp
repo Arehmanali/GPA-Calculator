@@ -2,7 +2,7 @@
 #include <iostream>
 #include<cstring>
 using namespace std;
-class gpa {						// Class for calculating gpa 
+class GPA {						// Class for calculating gpa 
 private:
 	double creditH[25];				// Store the credit hours of student	
 	string grade;					// variable for storing the grade of student in string variable	
@@ -16,7 +16,7 @@ public:
 	void evaluate();				// Compute the grades of student
 	float TotalGpa();				// Computes the gpa of enter grades
 };
-void gpa::enterGrade()
+void GPA::enterGrade()
 {
 	for (int i = 0; i < number_of_subjects; i++)			// Run for number of subjects time
 	{
@@ -44,7 +44,7 @@ void gpa::enterGrade()
 	}
 	
 }
-void gpa::evaluate()
+void GPA::evaluate()
 {	for (int i = 0; i < number_of_subjects; i++)
 	{
 		grade = gradeList[i];
@@ -101,20 +101,20 @@ void gpa::evaluate()
 		}
 	}
 }
-float gpa::TotalGpa()
+float GPA::TotalGpa()
 {
 	float total=(float)sum / credit;			// Calculate the total gpa
 	return total;
 }
-// driver programe
+// driver program
 int main()
 {
-       gpa g;
+       	GPA obectGPA;
 	cout<<"***********************************************************************************************************"<<endl;
 	cout<<"*******************************************GPA CALCULATOR**************************************************"<<endl;
 	cout<<"***********************************************************************************************************"<<endl;
 	cout << "Please enter the number of subjects including labs: ";
-	cin >> g.number_of_subjects;
+	cin >> obectGPA.number_of_subjects;
 	
 	// input error handled starts
 	if (cin.fail())
@@ -123,13 +123,13 @@ int main()
 		cin.clear();
 		cin.ignore(256,'\n');
 		cout << "\nPlease enter the number of subjects including labs: ";
-		cin >>g.number_of_subjects;
+		cin >>obectGPA.number_of_subjects;
 	}
 	// input erroer handled closes
 	
-	g.enterGrade();
-	g.evaluate();
-	double totalGpa = g.TotalGpa();
+	obectGPA.enterGrade();
+	obectGPA.evaluate();
+	double totalGpa = obectGPA.TotalGpa();
 	cout << "Your total gpa is: " << totalGpa;
 	cout<<"***********************************************************************************************************"<<endl;
 	cout<<"********************************************* Ending ******************************************************"<<endl;
